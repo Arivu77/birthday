@@ -35,3 +35,16 @@ function updateCountdown() {
 setInterval(updateCountdown, 1000);
 updateCountdown(); // Initial call
 
+document.addEventListener('DOMContentLoaded', () => {
+  const cameraButton = document.querySelectorAll('.sidebar button')[1]; // 📷 button
+  const photoUI = document.getElementById('photoUI');
+  const closeUIBtn = document.querySelector('.close-ui');
+
+  cameraButton.addEventListener('click', () => {
+    photoUI.style.display = 'block';
+  });
+
+  closeUIBtn.addEventListener('click', () => {
+    photoUI.style.display = 'none';
+  });
+});
